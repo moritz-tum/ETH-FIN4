@@ -1,0 +1,6 @@
+[submodule "FIN4Contracts"]
+	path = FIN4Contracts
+	url = https://github.com/johnrachwan123/FIN4Contracts.git
+[submodule "FIN4Xplorer"]
+	path = FIN4Xplorer
+	url = https://github.com/johnrachwan123/FIN4Xplorer.git
