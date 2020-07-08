@@ -1,0 +1,46 @@
+version: "3"
+services:
+  ganache:
+    container_name: ganache-cli
+    image: trufflesuite/ganache-cli
+    ports:
+      - "8545:8545"
+    command: --accounts 3 -e 100 --secure -u 0 -u 1 -m "${MNEMONIC}"
+    networks:
+      vpcbr:
+        ipv4_address: 192.178.0.2
+
+  fin4contracts:
+    container_name: fin4contracts
+    build:
+      context: ./FIN4Contracts/.
+    volumes:
+      - "${PROJECT_PATH}/FIN4Xplorer:/usr/src/app/FIN4Xplorer"
+    command: "truffle migrate --reset --network docker"
+    networks:
+      vpcbr:
+        ipv4_address: 192.178.0.3
+
+  fin4xplorer:
+    container_name: fin4xplorer
+    build:
+      context: ./FIN4Xplorer/.
+    volumes:
+      - "${PROJECT_PATH}/FIN4Xplorer/public:/usr/src/app/public"
+      - "${PROJECT_PATH}/FIN4Xplorer/src/:/usr/src/app/src/"
+      - "${PROJECT_PATH}/FIN4Xplorer/scripts:/usr/src/app/scripts"
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    command: "./wait-for-contracts.sh"
+    networks:
+      vpcbr:
+        ipv4_address: 192.178.0.4
+
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.178.0.0/16
