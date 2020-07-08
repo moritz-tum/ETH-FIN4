@@ -12,7 +12,7 @@ The project contains three services:
 
 1. Install Docker Desktop: [https://docs.docker.com/desktop/](https://docs.docker.com/desktop/)
 2. Add MetaMask to your browser: [https://metamask.io/](https://metamask.io/)
-3. `git clone https://github.com/moritz-schindelmann-tum/FIN4-dockerized.git`
+3. `git clone --recurse-submodules https://github.com/moritz-schindelmann-tum/ETH-FIN4.git`
 4. `cd FIN4-dockerized`
 
 ## Build the images / services
