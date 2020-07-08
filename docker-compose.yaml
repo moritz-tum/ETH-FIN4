@@ -16,7 +16,7 @@ services:
       context: ./FIN4Contracts/.
     volumes:
       - "${PROJECT_PATH}/FIN4Xplorer:/usr/src/app/FIN4Xplorer"
-    command: "truffle migrate --reset --network docker"
+    command: "./compile-and-migrate.sh"
     networks:
       vpcbr:
         ipv4_address: 192.178.0.3
