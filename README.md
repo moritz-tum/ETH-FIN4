@@ -30,3 +30,20 @@ Run `docker logs -f fin4xplorer` to follow the progress of the frontend startup.
 Make sure to do this before you try to access the frontend in your browser. 
 Choose localhost:8545 as the network that MetaMask connects to. If the import does not work at the first try. Switch to another network like ropsten, switch back and then import again.
 5. When the frontend server has started (which you will see in the console), you can access the frontend at [http://localhost:3000/](http://localhost:3000/).
+
+## Troubleshooting
+
+1. localhost:3000 returns `Unhandled Rejection (TypeError): Cannot destructure 'object null' as it is null.`
+
+  --> The account import from MetaMask did not work correctly. Please try it again.
+
+2. The container fin4xplorer exits `docker-compose up` with the following message: `exec: ./wait-for-contracts.sh` not found.
+
+or 
+
+2. The container fin4contracts exits `docker-compose up` with the following message: `exec: ./compile-and-migrate.sh` not found.
+
+--> Git windows might have automatically converted the file endings in the script files. 
+
+Run `git config --global core.autocrlf false`
+[https://stackoverflow.com/questions/51481711/docker-compose-containers-fail-and-exit-with-code-127-missing-bin-env-bash](more details.)
