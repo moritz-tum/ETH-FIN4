@@ -24,8 +24,8 @@ Depending on your system and docker version, you could see some warnings in the 
 
 1. Run `docker-compose up -d` to start the services in the detached mode.
 2. (Optional) Run `docker ps -a` to see all services.
-Run `docker logs -f fin4xplorer` to follow the progress of the frontend startup. 
-3. Go to your browser and import the ganache ethereum accounts to your MetaMask with the following seed phrase: 
+3. Run `docker logs -f fin4xplorer` to serve the frontend and follow the progress of the frontend startup. 
+4. Go to your browser and import the ganache ethereum accounts to your MetaMask with the following seed phrase: 
 `season prevent fault almost then hungry lazy typical pipe exist recipe milk` 
 Make sure to do this before you try to access the frontend in your browser. 
 Choose localhost:8545 as the network that MetaMask connects to. If the import does not work at the first try. Switch to another network like ropsten, switch back and then import again.
