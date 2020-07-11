@@ -2,11 +2,15 @@
 
 ## Structure
 
-The project contains three services:
+The project directory contains the following files and folders:
+-	FIN4Contracts: Contains the prototype’s smart contracts as well as compilation and deployment scripts
+-	FIN4Xplorer: Contains the React application
+-	Ethereum-bridge: Contains the logic that Provable needs to forward on-chain requests to off-chain verifiers and vice versa
+-	Docker-compose.yaml: Defines the containers that run the different services
+-	.env: Sets the seed phrase used by the local ganache blockchain to enable the import of the accounts in MetaMask
+-	.submodules: Handles the control of the FIN4Contracts and FIN4Xplorer directories that are individual repositories
+-	ReadMe.md: Contains instructions for setting up and using the prototype and also troubleshooting
 
-- ganache-cli: runs local private ethereum blockchain
-- FIN4Contracts
-- FIN4Xplorer: React frontend 
 
 ## Setup
 
@@ -23,7 +27,7 @@ Depending on your system and docker version, you could see some warnings in the 
 ## Start the system
 
 1. Run `docker-compose up -d` to start the services in the detached mode.
-2. (Optional) Run `docker ps -a` to see all services.
+2. Run `docker ps -a` to see all services.
 3. Go to your browser and import the ganache ethereum accounts to your MetaMask with the following seed phrase: 
 `season prevent fault almost then hungry lazy typical pipe exist recipe milk` 
 Make sure to do this before you try to access the frontend in your browser. 
@@ -46,4 +50,5 @@ or
 --> Git windows might have automatically converted the file endings in the script files. 
 
 Run `git config --global core.autocrlf false`
-[https://stackoverflow.com/questions/51481711/docker-compose-containers-fail-and-exit-with-code-127-missing-bin-env-bash](more details.)
+
+[more details](https://stackoverflow.com/questions/29045140/env-bash-r-no-such-file-or-directory)
