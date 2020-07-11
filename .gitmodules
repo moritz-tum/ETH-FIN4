@@ -4,3 +4,6 @@
 [submodule "FIN4Xplorer"]
 	path = FIN4Xplorer
 	url = https://github.com/johnrachwan123/FIN4Xplorer.git
+[submodule "ethereum-bridge"]
+	path = ethereum-bridge
+	url = https://github.com/moritz-schindelmann-tum/ethereum-bridge.git

@@ -5,7 +5,7 @@ services:
     image: trufflesuite/ganache-cli
     ports:
       - "8545:8545"
-    command: --accounts 3 -e 100 --secure -u 0 -u 1 -m "${MNEMONIC}"
+    command: --accounts 10 -e 100 --secure -u 0 -u 1 -u 2 -u 3 -u 4 -u 5 -u 6 -u 7 -u 8 -u 9 -m "${MNEMONIC}"
     networks:
       vpcbr:
         ipv4_address: 192.178.0.2
@@ -37,6 +37,15 @@ services:
     networks:
       vpcbr:
         ipv4_address: 192.178.0.4
+
+  ethbridge:
+    container_name: ethbridge
+    build:
+      context: "./ethereum-bridge/."
+    command: "./start-eth-bridge.sh"
+    networks:
+      vpcbr:
+        ipv4_address: 192.178.0.5
 
 networks:
   vpcbr:
