@@ -27,7 +27,7 @@ Depending on your system and docker version, you could see some warnings in the 
 ## Start the system
 
 1. Run `docker-compose up -d` to start the services in the detached mode.
-2. Run `docker ps -a` to see all services.
+2. (Optional) Run `docker ps -a` to see all services.
 3. Go to your browser and import the ganache ethereum accounts to your MetaMask with the following seed phrase: 
 `season prevent fault almost then hungry lazy typical pipe exist recipe milk` 
 Make sure to do this before you try to access the frontend in your browser. 
