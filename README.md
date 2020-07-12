@@ -36,6 +36,7 @@ Choose localhost:8545 as the network that MetaMask connects to. If the import do
 5. When the frontend server has started (which you will see in the console), you can access the frontend at [http://localhost:3000/](http://localhost:3000/).
 
 ## How to use GUI
+Take a look at the following video for a brief explanation on how to go through token verification and claiming:
 https://youtu.be/M7rbrSEilOs
 
 ## Troubleshooting
