@@ -32,12 +32,15 @@ Depending on your system and docker version, you could see some warnings in the 
 `season prevent fault almost then hungry lazy typical pipe exist recipe milk` 
 Make sure to do this before you try to access the frontend in your browser. 
 Choose localhost:8545 as the network that MetaMask connects to. If the import does not work at the first try. Switch to another network like ropsten, switch back and then import again.
-4. Run `docker logs -f fin4xplorer` to serve the frontend and follow the progress of the frontend startup. 
+4. Run `docker logs -f fin4xplorer` to follow the progress of the frontend startup (It make take a few minutes to start the front end). 
 5. When the frontend server has started (which you will see in the console), you can access the frontend at [http://localhost:3000/](http://localhost:3000/).
+
+## How to use GUI
+https://youtu.be/M7rbrSEilOs
 
 ## Troubleshooting
 
-1. localhost:3000 returns `Unhandled Rejection (TypeError): Cannot destructure 'object null' as it is null.`
+1. localhost:3000 returns `Unhandled Rejection (TypeError): Cannot destructure 'object null' as it is null.` This is probably due to a docker-compose down followed by docker-compose up -d 
 
   --> The account import from MetaMask did not work correctly. Please try it again.
 
