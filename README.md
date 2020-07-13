@@ -22,16 +22,16 @@ The project directory contains the following files and folders:
 ## Build the images / services
 
 Run `docker-compose build`
-Depending on your system and docker version, you could see some warnings in the console. You can ignore these warnings as long as the build finishes successfully.
+Depending on your system and docker version, you could see some warnings/errors in the console. You can ignore these as long as the build finishes successfully.
 
 ## Start the system
-
+Important note: Please do not start and stop single containers. Existing dependencies between the services require to start the system centrally using docker-compose as follows:
 1. Run `docker-compose up -d` to start the services in the detached mode.
 2. (Optional) Run `docker ps -a` to see all services.
 3. Go to your browser and import the ganache ethereum accounts to your MetaMask with the following seed phrase: 
 `season prevent fault almost then hungry lazy typical pipe exist recipe milk` 
 Make sure to do this before you try to access the frontend in your browser. 
-Choose localhost:8545 as the network that MetaMask connects to. If the import does not work at the first try. Switch to another network like ropsten, switch back and then import again.
+Choose localhost:8545 as the network that MetaMask connects to. If the import does not work at the first try, switch to another network like ropsten, switch back and then import again.
 4. Run `docker logs -f fin4xplorer` to follow the progress of the frontend startup (It make take a few minutes to start the front end). 
 5. When the frontend server has started (which you will see in the console), you can access the frontend at [http://localhost:3000/](http://localhost:3000/).
 
