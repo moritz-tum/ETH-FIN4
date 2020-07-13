@@ -16,8 +16,9 @@ The project directory contains the following files and folders:
 
 1. Install Docker Desktop: [https://docs.docker.com/desktop/](https://docs.docker.com/desktop/)
 2. Add MetaMask to your browser: [https://metamask.io/](https://metamask.io/)
-3. `git clone --recurse-submodules https://github.com/moritz-schindelmann-tum/ETH-FIN4.git`
-4. `cd ETH-FIN4`
+3. On windows: `git config --global core.autocrlf false` check the troubleshooting section to see why this is needed.
+4. `git clone --recurse-submodules https://github.com/moritz-schindelmann-tum/ETH-FIN4.git`
+5. `cd ETH-FIN4`
 
 ## Build the images / services
 
